@@ -22,6 +22,8 @@ client.on('messageCreate', (msg) =>{
 
   if (msg.content === 'hello') {
     msg.reply(`Yo ${client.user.tag} Here! How i can help you today ${msg.author}`);
+  } else if (msg.content === 'Apakah aleg gila?') {
+    msg.reply(`Iya dia gila!`);
   }
 });
 
