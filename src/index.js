@@ -31,10 +31,10 @@ client.on('interactionCreate', (interaction) =>{
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'add') {
-    const num1 = interaction.options.get('first-number');
-    const num2 = interaction.options.get('second-number');
+    const num1 = interaction.options.get('first-number').value;
+    const num2 = interaction.options.get('second-number').value;
 
-    console.log(num1);
+    interaction.reply(`Hasil dari penjumlahan ${num1} dan ${num2} = ${num1 + num2}`)
   }
 });
 

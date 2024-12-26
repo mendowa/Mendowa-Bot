@@ -1,24 +1,10 @@
 require('dotenv').config();
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
+const { validateInputTools } = require('openai/lib/parser.mjs');
 
 const commands = [
   {
-    name: 'add',
-    description: 'Add two numbers.',
-    options: [
-      {
-        name: 'first-number',
-        description: 'The first number',
-        type: ApplicationCommandOptionType.Number,
-        require: true,
-      },
-      {
-        name: 'second-number',
-        description: 'The second number',
-        type: ApplicationCommandOptionType.Number,
-        require: true,
-      },
-    ],
+    
   },
 ];
 
