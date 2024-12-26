@@ -1,12 +1,9 @@
 require('dotenv').config();
+
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
 const { validateInputTools } = require('openai/lib/parser.mjs');
 
-const commands = [
-  {
-    
-  },
-];
+const commands = [{ name: 'embed', description: 'Sends an embed!' }];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
