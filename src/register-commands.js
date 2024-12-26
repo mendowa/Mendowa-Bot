@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
 const { validateInputTools } = require('openai/lib/parser.mjs');
 
