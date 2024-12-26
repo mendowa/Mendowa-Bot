@@ -9,14 +9,16 @@ client.on('ready', () => {
 });
 
 client.on('messageCreate', async (msg) =>{
-  if (msg.author.bot || !bot.content) return;
+  if (msg.author.bot || !msg.content) return;
 
   switch (msg.content) {
-    case 'hello' || 'Hello':
+    case 'hello':
       await msg.reply(`Yo ${client.user.tag} Here! How I can help you today, ${msg.author}?`);
       break;
     case 'Apakah aleg gila?':
       await msg.reply(`Iya dia gila`);
+      break;
+    default:
       break;
   }
 });
