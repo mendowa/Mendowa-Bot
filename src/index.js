@@ -24,10 +24,6 @@ client.on('messageCreate', (msg) =>{
     msg.reply(`Yo ${client.user.tag} Here! How i can help you today ${msg.author}`);
   } else if (msg.content === 'Apakah aleg gila?') {
     msg.reply(`Iya dia gila!`);
-  } else if (msg.content === 'Siapa saja waifu saya?') {
-    msg.reply(`Raiden Ei, Archeron, Raiden Mei`);
-  } else if (msg.content === 'bagus') {
-    msg.reply(`Trimakasih tuan ${msg.author}`);
   }
 });
 
