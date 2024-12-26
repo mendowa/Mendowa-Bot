@@ -33,7 +33,28 @@ client.on('interactionCreate', (interaction) =>{
   if (interaction.commandName === 'embed') {
     const embed = new EmbedBuilder()
     .setTitle('Embed title')
-    .setDescription('This is an embed desscription');
+    .setDescription('This is an embed desscription')
+    .setColor('Random')
+    .addFields({
+      name: 'Founder', 
+      value: 'Founder of the mendowa corporation', 
+      inline: true
+    },
+    {
+      name: 'Co-Founder', 
+      value: 'Founder of the mendowa corporation', 
+      inline: true
+    },
+    {
+      name: 'Tech Nerds', 
+      value: 'The person who really into tech', 
+      inline: true
+    },
+    {
+      name: 'Orang Ganteng', 
+      value: 'A giften role for the cool people', 
+      inline: false
+    })
 
     interaction.reply({ embeds: [embed] });
   }
