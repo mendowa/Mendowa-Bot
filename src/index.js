@@ -17,6 +17,12 @@ client.on('messageCreate', async (msg) =>{
     case 'Apakah aleg gila?':
       await msg.reply(`Iya dia gila`);
       break;
+    case 'Siapa saja waifu saya?':
+      await msg.reply(`Raiden Shogun, Raiden Mei, Archeron, Kafka, Ruan Mei`);
+      break;
+    case 'Bingung':
+      await msg.reply(`Saya dapat merekomendasikan kegiatan jika anda bingung!`);
+      break;
     default:
       break;
   }
