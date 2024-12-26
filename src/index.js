@@ -27,81 +27,43 @@ client.on('messageCreate', (msg) =>{
   }
 });
 
-client.on('interactionCreate', (interaction) =>{
+client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'embed') {
     const embed = new EmbedBuilder()
-    .setTitle('Oi, Welcome to Mendowa Server, bruv!')
-    .setDescription('This here’s the spot, innit? Vibes are top-tier.')
-    .setColor('Random')
-    .addFields(
-      {
-        name: 'Founder', 
-        value: 'Big boss man of Mendowa corp, yeah?', 
-        inline: true
-      },
-      {
-        name: 'Co-Founder', 
-        value: 'Second-in-command, still running the ting.', 
-        inline: true
-      },
-      {
-        name: 'Tech Nerds', 
-        value: 'Proper whizzes, love their gadgets, y’know.', 
-        inline: true
-      },
-      {
-        name: 'Orang Ganteng', 
-        value: 'This one’s for the stunners, keepin’ it suave.', 
-        inline: true
-      },
-      {
-        name: `Lil' G`, 
-        value: 'This role’s for the real ones—verified and vibin’ in the crew.', 
-        inline: true
-      },
-    );
+      .setThumbnail('https://avatars.githubusercontent.com/u/192787967?s=96&v=4')
+      .setTitle('Oi, Welcome to Mendowa Server Bruv!')
+      .setDescription(`This here's the spot, innit? Vibes are top-tier.`)
+      .setColor('Random')
+      .addFields(
+        { name: 'Founder', value: 'Big boss man of Mendowa corp, yeah?', inline: true },
+        { name: 'Co-Founder', value: 'Second-in-command, still running the ting.', inline: true },
+        { name: 'Tech Nerds', value: 'Proper whizzes, love their gadgets, y’know.', inline: true },
+        { name: 'Orang Ganteng', value: 'This one’s for the stunners, keepin’ it suave.', inline: true },
+        { name: `Lil' G`, value: 'This role’s for the real ones—verified and vibin’ in the crew.', inline: true }
+      );
 
-    interaction.reply({ embeds: [embed] });
+    await interaction.reply({ embeds: [embed] });
   }
 });
 
 client.on('messageCreate', (messege) =>{
   if (messege.content === 'embed') {
     const embed = new EmbedBuilder()
-    .setTitle('Oi, Welcome to Mendowa Server, bruv!')
-    .setDescription('This here’s the spot, innit? Vibes are top-tier.')
-    .setColor('Random')
-    .addFields(
-      {
-        name: 'Founder', 
-        value: 'Big boss man of Mendowa corp, yeah?', 
-        inline: true
-      },
-      {
-        name: 'Co-Founder', 
-        value: 'Second-in-command, still running the ting.', 
-        inline: true
-      },
-      {
-        name: 'Tech Nerds', 
-        value: 'Proper whizzes, love their gadgets, y’know.', 
-        inline: true
-      },
-      {
-        name: 'Orang Ganteng', 
-        value: 'This one’s for the stunners, keepin’ it suave.', 
-        inline: true
-      },
-      {
-        name: `Lil' G`, 
-        value: 'This role’s for the real ones—verified and vibin’ in the crew.', 
-        inline: true
-      },
-    );
+      .setThumbnail('https://avatars.githubusercontent.com/u/192787967?s=96&v=4')
+      .setTitle('Oi, Welcome to Mendowa Server Bruv!')
+      .setDescription(`This here's the spot, innit? Vibes are top-tier.`)
+      .setColor('Random')
+      .addFields(
+        { name: 'Founder', value: 'Big boss man of Mendowa corp, yeah?', inline: true },
+        { name: 'Co-Founder', value: 'Second-in-command, still running the ting.', inline: true },
+        { name: 'Tech Nerds', value: 'Proper whizzes, love their gadgets, y’know.', inline: true },
+        { name: 'Orang Ganteng', value: 'This one’s for the stunners, keepin’ it suave.', inline: true },
+        { name: `Lil' G`, value: 'This role’s for the real ones—verified and vibin’ in the crew.', inline: true }
+      );
 
-    interaction.channel.send({ embeds: [embed] });
+    messege.channel.send({ embeds: [embed] });
   }
 });
 
