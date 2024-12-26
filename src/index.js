@@ -32,29 +32,36 @@ client.on('interactionCreate', (interaction) =>{
 
   if (interaction.commandName === 'embed') {
     const embed = new EmbedBuilder()
-    .setTitle('Embed title')
-    .setDescription('This is an embed desscription')
+    .setTitle('Oi, Welcome to Mendowa Server, bruv!')
+    .setDescription('This here’s the spot, innit? Vibes are top-tier.')
     .setColor('Random')
-    .addFields({
-      name: 'Founder', 
-      value: 'Founder of the mendowa corporation', 
-      inline: true
-    },
-    {
-      name: 'Co-Founder', 
-      value: 'Founder of the mendowa corporation', 
-      inline: true
-    },
-    {
-      name: 'Tech Nerds', 
-      value: 'The person who really into tech', 
-      inline: true
-    },
-    {
-      name: 'Orang Ganteng', 
-      value: 'A giften role for the cool people', 
-      inline: false
-    })
+    .addFields(
+      {
+        name: 'Founder', 
+        value: 'Big boss man of Mendowa corp, yeah?', 
+        inline: true
+      },
+      {
+        name: 'Co-Founder', 
+        value: 'Second-in-command, still running the ting.', 
+        inline: true
+      },
+      {
+        name: 'Tech Nerds', 
+        value: 'Proper whizzes, love their gadgets, y’know.', 
+        inline: true
+      },
+      {
+        name: 'Orang Ganteng', 
+        value: 'This one’s for the stunners, keepin’ it suave.', 
+        inline: true
+      },
+      {
+        name: `Lil' G`, 
+        value: 'This role’s for the real ones—verified and vibin’ in the crew.', 
+        inline: true
+      }
+    )
 
     interaction.reply({ embeds: [embed] });
   }
