@@ -30,10 +30,11 @@ client.on('messageCreate', (msg) =>{
 client.on('interactionCreate', (interaction) =>{
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'hey') {
-    interaction.reply('hey!');
-  } else if (interaction.commandName === 'ping') {
-    interaction.reply('pong!');
+  if (interaction.commandName === 'add') {
+    const num1 = interaction.options.get('first-number');
+    const num2 = interaction.options.get('second-number');
+
+    console.log(num1);
   }
 });
 
