@@ -1,29 +1,23 @@
 require('dotenv').config();
 
-const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');  // Use GatewayIntentBits in v14
-
+const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMembers, 
-    GatewayIntentBits.MessageContent, 
-    GatewayIntentBits.GuildMessages,
-  ],
-});
+  intents: [ GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
 
-client.on('messageCreate', (msg) =>{
-  if (msg.author.bot) {
-    return;
-  }
+client.on('messageCreate', async (msg) =>{
+  if (msg.author.bot || !bot.content) return;
 
-  if (msg.content === 'hello') {
-    msg.reply(`Yo ${client.user.tag} Here! How i can help you today ${msg.author}`);
-  } else if (msg.content === 'Apakah aleg gila?') {
-    msg.reply(`Iya dia gila!`);
+  switch (msg.content) {
+    case 'hello' || 'Hello':
+      await msg.reply(`Yo ${client.user.tag} Here! How I can help you today, ${msg.author}?`);
+      break;
+    case 'Apakah aleg gila?':
+      await msg.reply(`Iya dia gila`);
+      break;
   }
 });
 
