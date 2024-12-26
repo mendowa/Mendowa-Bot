@@ -4,7 +4,8 @@ const { validateInputTools } = require('openai/lib/parser.mjs');
 
 const commands = [
   {
-    
+    name: 'embed',
+    description: 'Sends an embed!',
   },
 ];
 

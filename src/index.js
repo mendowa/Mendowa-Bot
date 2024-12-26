@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { Client, GatewayIntentBits, messageLink, Message } = require('discord.js');  // Use GatewayIntentBits in v14
+const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');  // Use GatewayIntentBits in v14
 
 const client = new Client({
   intents: [
@@ -30,11 +30,12 @@ client.on('messageCreate', (msg) =>{
 client.on('interactionCreate', (interaction) =>{
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'add') {
-    const num1 = interaction.options.get('first-number').value;
-    const num2 = interaction.options.get('second-number').value;
+  if (interaction.commandName === 'embed') {
+    const embed = new EmbedBuilder()
+    .setTitle('Embed title')
+    .setDescription('This is an embed desscription');
 
-    interaction.reply(`Hasil dari penjumlahan ${num1} dan ${num2} = ${num1 + num2}`)
+    interaction.reply({ embeds: [embed] });
   }
 });
 
